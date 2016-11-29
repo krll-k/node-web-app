@@ -6,7 +6,8 @@ docker run -p 8080:8080 -d krll/node-web-app
 ```sh
 $ mkdir public
 $ echo "Hello World" > public/index.html
-$ docker run -p 8080:8080 -d -v ./public/:/usr/src/app/public --name=app krll/node-web-app
+$ pwd /home/user
+$ docker run -p 8080:8080 -d -v /home/user/public/:/usr/src/app/public --name=app krll/node-web-app
 $ docker logs app                                                                                                                          
 npm info it worked if it ends with ok                                                                                                                      
 npm info using npm@2.15.11                                                                                                                                 
